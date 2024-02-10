@@ -1,0 +1,34 @@
+name: Create new service or tenant
+run-name: ${{ github.actor }} is creating new service or tenant 🚀
+on:
+    workflow_dispatch:
+        inputs:
+            tenant:
+                description: 'Tenant'
+                type: choice
+                options:
+                    - tenant1
+                    - tenant2
+                    - tenant3
+                    - tenant4
+                required: true
+            serviceName:
+                description: 'Service Name'
+                type: string
+                required: true
+
+jobs:
+    scaffolding:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+        - run: |
+            echo "Building ${{ inputs.serviceName }} on ${{ inputs.tenant }}"
+            python3 -m pip install --user cookiecutter
+            python3 -m cookiecutter -s -f --no-input ${{ github.workspace }}/_template tenant=${{ inputs.tenant }} service=${{ inputs.serviceName }}
+        - name: Create Pull Request
+          uses: peter-evans/create-pull-request@v6
+          with:
+            token: ${{ secrets.TOKEN }}
+            title: "Adding service ${{ inputs.serviceName }} to ${{ inputs.tenant }}"
+            branch: feat/add-${{ inputs.serviceName }}

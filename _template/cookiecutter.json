@@ -1,0 +1,58 @@
+{
+    "tenant": "tenantName",
+    "service": "serviceName",
+    "environments": {
+        "dev": {
+            "accountId": "11111",
+            "vpcId": "11111",
+            "albSubnets":"11111",
+            "serviceSubnets":"11111",
+            "permissionsBoundary": "11111",
+            "kmsARN": "11111",
+            "albDns": "11111",
+            "domain": "11111",
+            "zoneId": "11111",
+            "securityGroupECS": "11111",
+            "certificateArn": "11111"
+        },
+        "test": {
+            "accountId": "22222",
+            "vpcId": "22222",
+            "albSubnets":"22222",
+            "serviceSubnets":"22222",
+            "permissionsBoundary": "22222",
+            "kmsARN": "22222",
+            "albDns": "22222",
+            "domain": "22222",
+            "zoneId": "22222",
+            "securityGroupECS": "22222",
+            "certificateArn": "22222"
+        },
+        "preprod": {
+            "accountId": "33333",
+            "vpcId": "33333",
+            "albSubnets":"33333",
+            "serviceSubnets":"33333",
+            "permissionsBoundary": "33333",
+            "kmsARN": "33333",
+            "albDns": "33333",
+            "domain": "33333",
+            "zoneId": "33333",
+            "securityGroupECS": "33333",
+            "certificateArn": "33333"
+        },
+        "prod": {
+            "accountId": "44444",
+            "vpcId": "44444",
+            "albSubnets":"44444",
+            "serviceSubnets":"44444",
+            "permissionsBoundary": "44444",
+            "kmsARN": "44444",
+            "albDns": "44444",
+            "domain": "44444",
+            "zoneId": "44444",
+            "securityGroupECS": "44444",
+            "certificateArn": "44444"
+        }
+    }
+}

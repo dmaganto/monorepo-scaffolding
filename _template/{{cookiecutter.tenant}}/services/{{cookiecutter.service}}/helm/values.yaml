@@ -1,0 +1,11 @@
+ecs-service-generic:
+  tenant: &tenant {{cookiecutter.tenant}}
+  region: eu-west-1
+  serviceName: &serviceName {{cookiecutter.service}}
+  containerDefinitions:
+    logConfiguration:
+      logDriver: awslogs
+      options:
+        awslogs-group: {{cookiecutter.tenant}}
+        awslogs-region: eu-west-1
+        awslogs-stream-prefix: *serviceName

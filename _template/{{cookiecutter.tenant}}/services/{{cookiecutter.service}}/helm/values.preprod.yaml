@@ -1,0 +1,33 @@
+ecs-service-generic:
+  env: preprod
+  clusterName: preprod
+  serviceName: &serviceName {{cookiecutter.service}}
+  replicas: 1
+  memory: "512"
+  cpu: "256"
+  containerDefinitions:
+    image: "{{cookiecutter.tenant}}/{{cookiecutter.service}}:v1.0"
+    name: *serviceName
+    cpu: 0
+    logConfiguration:
+      options:
+        awslogs-group: {{cookiecutter.tenant}}-preprod
+    portMappings: 
+    - containerPort: 8080
+      hostPort: 8080
+      protocol: tcp
+    essential: true
+    command:
+    - "/opt/java/openjdk/bin/java"
+    - "-jar"
+    - "/jar/{{cookiecutter.service}}.jar"
+    secrets: 
+      - name: "SECRET_CONNECTION"
+        valueFrom: ""   # ADDED BY USER
+    environment:
+      - name: "STAGE"
+        value: "preprod"
+      - name: "TENANT"
+        value: "{{cookiecutter.tenant}}"
+  secrets:
+   - arn:aws:secretsmanager:eu-west-1:*:secret:{{cookiecutter.service}}-??????

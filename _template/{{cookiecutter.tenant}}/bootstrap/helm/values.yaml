@@ -1,0 +1,3 @@
+ecs-tenant-bootstrap:
+  tenant: {{cookiecutter.tenant}}
+  region: eu-west-1

@@ -1,0 +1,10 @@
+apiVersion: v2
+name: {{cookiecutter.service}}
+description: The helm chart for {{cookiecutter.service}}
+type: application
+version: 0.1.1
+appVersion: 0.1.1
+dependencies:
+  - name: ecs-service-generic
+    version: ~1
+    repository: "oci://my-ecr-repo/helm-charts"

@@ -1,0 +1,14 @@
+ecs-tenant:
+  env: preprod
+  clusterName: preprod
+  accountId: {{ cookiecutter.environments.preprod.accountId }}
+  vpcId: {{ cookiecutter.environments.preprod.vpcId }}
+  albSubnets: {{ cookiecutter.environments.preprod.albSubnets }}
+  serviceSubnets: {{ cookiecutter.environments.preprod.serviceSubnets }}
+  permissionsBoundary: {{ cookiecutter.environments.preprod.permissionsBoundary }}
+  kmsARN: {{ cookiecutter.environments.preprod.kmsARN }}
+  albDns: {{ cookiecutter.environments.preprod.albDns }}
+  domain: {{ cookiecutter.environments.preprod.domain }}
+  zoneId: {{ cookiecutter.environments.preprod.zoneId }}
+  securityGroupECS: {{ cookiecutter.environments.preprod.securityGroupECS }}
+  certificateArn: {{ cookiecutter.environments.preprod.certificateArn }}
