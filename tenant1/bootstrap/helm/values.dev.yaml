@@ -1,0 +1,14 @@
+ecs-tenant:
+  env: dev
+  clusterName: dev
+  accountId: 11111
+  vpcId: 11111
+  albSubnets: 11111
+  serviceSubnets: 11111
+  permissionsBoundary: 11111
+  kmsARN: 11111
+  albDns: 11111
+  domain: 11111
+  zoneId: 11111
+  securityGroupECS: 11111
+  certificateArn: 11111

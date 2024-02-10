@@ -1,0 +1,11 @@
+ecs-service-generic:
+  tenant: &tenant tenant1
+  region: eu-west-1
+  serviceName: &serviceName my-amazing-service
+  containerDefinitions:
+    logConfiguration:
+      logDriver: awslogs
+      options:
+        awslogs-group: tenant1
+        awslogs-region: eu-west-1
+        awslogs-stream-prefix: *serviceName
