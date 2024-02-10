@@ -1,0 +1,14 @@
+ecs-tenant:
+  env: preprod
+  clusterName: preprod
+  accountId: 33333
+  vpcId: 33333
+  albSubnets: 33333
+  serviceSubnets: 33333
+  permissionsBoundary: 33333
+  kmsARN: 33333
+  albDns: 33333
+  domain: 33333
+  zoneId: 33333
+  securityGroupECS: 33333
+  certificateArn: 33333

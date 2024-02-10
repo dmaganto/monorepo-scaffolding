@@ -1,0 +1,14 @@
+ecs-tenant:
+  env: prod
+  clusterName: prod
+  accountId: 44444
+  vpcId: 44444
+  albSubnets: 44444
+  serviceSubnets: 44444
+  permissionsBoundary: 44444
+  kmsARN: 44444
+  albDns: 44444
+  domain: 44444
+  zoneId: 44444
+  securityGroupECS: 44444
+  certificateArn: 44444

@@ -1,0 +1,10 @@
+apiVersion: v2
+name: tenant1
+description: The helm chart for the tenant1
+type: application
+version: 0.1.1
+appVersion: 0.1.1
+dependencies:
+  - name: ecs-tenant
+    version: ~1
+    repository: "oci://my-ecr-repo/helm-charts"

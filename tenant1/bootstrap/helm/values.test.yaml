@@ -1,0 +1,14 @@
+ecs-tenant:
+  env: test
+  clusterName: test
+  accountId: 22222
+  vpcId: 22222
+  albSubnets: 22222
+  serviceSubnets: 22222
+  permissionsBoundary: 22222
+  kmsARN: 22222
+  albDns: 22222
+  domain: 22222
+  zoneId: 22222
+  securityGroupECS: 22222
+  certificateArn: 22222
